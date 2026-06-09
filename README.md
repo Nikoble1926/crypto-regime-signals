@@ -33,6 +33,23 @@ this Skill first to decide *whether the current market is worth acting in*, then
 - **Native x402 + Pharos.** Built on the official `@x402/express` pattern; agents pay with USDC,
   no key, no account, no subscription.
 
+
+## Architecture
+
+```mermaid
+flowchart LR
+  A[AI Agent] -->|GET /regime?pair=XBTUSD| S[Regime Skill Server]
+  S -->|HTTP 402 + x402 challenge| A
+  A -->|sign EIP-3009, pay USDC| F[x402 Facilitator]
+  F -->|settle on Pharos 688689| S
+  K[(Kraken public OHLC)] -->|live data| S
+  S -->|200 OK: regime, quick_score| A
+  A -->|gate: regime favourable AND score >= 60| D{Act?}
+  P[Publisher] -->|attest| O[RegimeOracle on Pharos]
+```
+
+A pays per call over x402; the server computes the regime from live Kraken data and returns it. The same read is attested on-chain via `RegimeOracle`. A composing agent gates its actions on `regime` + `quick_score`.
+
 ## What you get
 
 | Endpoint | Cost | Returns |
