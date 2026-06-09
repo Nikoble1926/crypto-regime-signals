@@ -1,15 +1,15 @@
-﻿# Crypto Regime Signals â€” an x402 Skill for AI Agents on Pharos
+# Crypto Regime Signals â€” an x402 Skill for AI Agents on Pharos
 
 [![CI](https://github.com/Nikoble1926/crypto-regime-signals/actions/workflows/ci.yml/badge.svg)](https://github.com/Nikoble1926/crypto-regime-signals/actions/workflows/ci.yml)
 
 ## On-chain proof - Pharos Atlantic (chainId 688689)
 
-The companion **RegimeOracle** contract (`contracts/RegimeOracle.sol`) is **deployed live on Pharos Atlantic testnet**. The Skill publisher commits the latest regime read on-chain, giving the signal a tamper-evident, queryable track record any agent or contract can verify.
+The companion **RegimeOracle** contract (`contracts/RegimeOracle.sol`) is **deployed and source-verified on Pharos Atlantic testnet**. The Skill publisher commits the latest regime read on-chain, giving the signal a tamper-evident, queryable track record any agent or contract can verify.
 
 - **RegimeOracle:** `0xd7ada595fbed3c2fc547c8ec57a5e581cfb3ad3e`
 - **Deploy tx:** `0x53c442b81db4cab952c2bcdb0761f2424bfce7894e56fa04c72f952027c751d5`
 - **First attestation** (XBTUSD -> trending_down, quick_score 36): `0x60befabd5576e5dda66044214b1e7cd11c5f90d14cc20ea6e67dac4394dd2b25`
-- Explorer: https://pharos-testnet.socialscan.io/
+- **Verified source on explorer** (green check, full source published): https://pharos-testnet.socialscan.io/address/0xd7ada595fbed3c2fc547c8ec57a5e581cfb3ad3e#code
 
 Reproduce: `npm i solc && node compile.cjs && node_modules/.bin/tsx deploy_oracle.mjs` (needs a funded `.private_key` on Pharos Atlantic).
 
