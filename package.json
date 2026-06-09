@@ -1,0 +1,27 @@
+{
+  "name": "crypto-regime-signals-pharos",
+  "version": "1.0.0",
+  "description": "x402 Skill: pay-per-call crypto market-regime signals for AI agents on Pharos.",
+  "type": "module",
+  "scripts": {
+    "server": "tsx server.ts",
+    "client": "tsx client.ts",
+    "regime": "tsx -e \"import('./regime.ts').then(m=>m.computeRegime(process.argv[1]||'XBTUSD')).then(s=>console.log(JSON.stringify(s,null,2)))\""
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@x402/core": "latest",
+    "@x402/evm": "latest",
+    "@x402/express": "latest",
+    "@x402/fetch": "latest",
+    "dotenv": "latest",
+    "express": "latest",
+    "viem": "latest"
+  },
+  "devDependencies": {
+    "@types/express": "latest",
+    "@types/node": "latest",
+    "tsx": "latest",
+    "typescript": "latest"
+  }
+}
