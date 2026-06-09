@@ -4,3 +4,6 @@ node_modules/
 *.log
 dist/
 .DS_Store
+onchain_result.json
+solc_install.log
+genkey.mjs
