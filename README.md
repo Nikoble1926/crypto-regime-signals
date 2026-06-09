@@ -13,6 +13,8 @@ The companion **RegimeOracle** contract (`contracts/RegimeOracle.sol`) is **depl
 
 Reproduce: `npm i solc && node compile.cjs && node_modules/.bin/tsx deploy_oracle.mjs` (needs a funded `.private_key` on Pharos Atlantic).
 
+**Read the latest attestation yourself (no key, public RPC):** `node read_oracle.mjs XBTUSD` -> prints `{regime, quick_score, asof_utc, data_hash, total_attestations}` straight from the on-chain RegimeOracle.
+
 **Submission: Pharos Ã— Anvita Flow â€” Skill-to-Agent Dual Cascade Hackathon (Phase 1, Skill Hackathon).**
 
 A reusable **Skill** that lets an AI agent buy **decision-grade market context** â€” a classified
