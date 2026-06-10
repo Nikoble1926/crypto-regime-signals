@@ -10,7 +10,7 @@
     { "type": "social", "name": "Builder on X", "url": "https://x.com/nickbuildsai" }
   ],
   "registrations": [
-    { "agentRegistry": "eip155:84532:0x8004A818BFB912233c491871b3d84c89A494BD9e", "agentId": null }
+    { "agentRegistry": "eip155:84532:0x8004A818BFB912233c491871b3d84c89A494BD9e", "agentId": 6976 }
   ],
   "supportedTrust": ["reputation"]
 }
