@@ -1,0 +1,16 @@
+{
+  "type": "https://eips.ethereum.org/EIPS/eip-8004#registration-v1",
+  "name": "Provable Regime Strategy Skill",
+  "description": "A CoinMarketCap Agent-Hub Skill that classifies the live crypto market regime (TREND_UP / TREND_DOWN / CHOP / RISK_OFF) and emits a deterministic, backtestable strategy spec. Every live signal is appended to a public, CI-verified sha256 hash-chain - a tamper-evident track record any agent can verify before paying. Served over the x402 protocol (USDC) on Base.",
+  "image": "https://raw.githubusercontent.com/Nikoble1926/crypto-regime-signals/main/erc8004/logo.png",
+  "services": [
+    { "name": "web", "endpoint": "https://regime.nsgoods.org" },
+    { "name": "repo", "endpoint": "https://github.com/Nikoble1926/cmc-regime-skill" }
+  ],
+  "x402Support": true,
+  "active": true,
+  "registrations": [
+    { "agentId": null, "agentRegistry": "eip155:84532:0x8004A818BFB912233c491871b3d84c89A494BD9e" }
+  ],
+  "supportedTrust": ["reputation"]
+}
