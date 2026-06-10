@@ -1,16 +1,18 @@
 {
-  "type": "https://eips.ethereum.org/EIPS/eip-8004",
+  "type": "https://eips.ethereum.org/EIPS/eip-8004#registration-v1",
   "name": "Crypto Regime Signals",
   "description": "Pay-per-call crypto market-regime signals for AI agents. Classifies the live market regime (trend + volatility + a 0-100 quick-score) for major pairs from real Kraken data, served over the x402 protocol in USDC with no API keys. Every regime read is committed on-chain (RegimeOracle) and to a public hash-chain, giving a tamper-evident, queryable track record any agent can verify before paying.",
   "image": "https://raw.githubusercontent.com/Nikoble1926/crypto-regime-signals/main/erc8004/logo.png",
   "services": [
-    { "type": "x402-http", "name": "Regime signals API (Base mainnet, USDC per call)", "url": "https://signals.nsgoods.org" },
-    { "type": "repo", "name": "Open-source x402 Skill + on-chain oracle", "url": "https://github.com/Nikoble1926/crypto-regime-signals" },
-    { "type": "onchain", "name": "RegimeOracle (source-verified, Pharos Atlantic)", "url": "https://pharos-testnet.socialscan.io/address/0xd7ada595fbed3c2fc547c8ec57a5e581cfb3ad3e#code" },
-    { "type": "social", "name": "Builder on X", "url": "https://x.com/nickbuildsai" }
+    { "name": "web", "endpoint": "https://signals.nsgoods.org" },
+    { "name": "repo", "endpoint": "https://github.com/Nikoble1926/crypto-regime-signals" },
+    { "name": "onchain-oracle", "endpoint": "https://pharos-testnet.socialscan.io/address/0xd7ada595fbed3c2fc547c8ec57a5e581cfb3ad3e#code" },
+    { "name": "x", "endpoint": "https://x.com/nickbuildsai" }
   ],
+  "x402Support": true,
+  "active": true,
   "registrations": [
-    { "agentRegistry": "eip155:84532:0x8004A818BFB912233c491871b3d84c89A494BD9e", "agentId": 6976 }
+    { "agentId": 6976, "agentRegistry": "eip155:84532:0x8004A818BFB912233c491871b3d84c89A494BD9e" }
   ],
   "supportedTrust": ["reputation"]
 }
